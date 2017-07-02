@@ -1,0 +1,24 @@
+module mypacket {
+    yang-version 1;
+    namespace "urn:opendaylight:params:xml:ns:yang:mypacket";
+    prefix "mypacket";
+
+    import opendaylight-inventory {prefix inv;revision-date "2013-08-19";}
+
+    revision "2015-01-05" {
+        description "Initial revision of mypacket model";
+    }
+
+    rpc send-mypacket {
+    	input {
+    		leaf name {
+    			type string;
+    		}
+    	}
+    	output {
+    		leaf result {
+    			type string;
+    		}
+    	}
+    }
+}
